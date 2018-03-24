@@ -114,7 +114,7 @@
 			$resulttableid = mysql_query($tableidquery);
 			$tableid = mysql_result($resulttableid,0,"MAX(ID)");
 			$tableid++;
-			$tablequery = "INSERT INTO Game_Table VALUES (" . $tableid . ", '" . mysql_result($result,$i,"Player_name1") . "', '" . mysql_result($result,$i,"Player_name2") . "', " . $maxidp1 . ", " . $maxidp2 . ", " . $maxidp1 . ", " . $maxidp2 . ", 0, 0, 0, 0, 2)";
+			$tablequery = "INSERT INTO Game_Table VALUES (" . $tableid . ", '" . mysql_result($result,$i,"Player_name1") . "', '" . mysql_result($result,$i,"Player_name2") . "', " . $maxidp1 . ", " . $maxidp2 . ", " . $maxidp1 . ", " . $maxidp2 . ", 0, 0, 0, 0, 2, 300, 300)";
 			$tableresult = mysql_query($tablequery);
 			echo mysql_errno($tableresult) . ": " . mysql_error($tableresult). "\n";
 			$i++;

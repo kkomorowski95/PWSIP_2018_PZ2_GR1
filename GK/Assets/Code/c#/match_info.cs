@@ -10,7 +10,12 @@ public class match_info : MonoBehaviour {
     public GameObject[] ally_cards;
     public GameObject[] card_played;
     public GameObject button;
+    public GameObject playerHP;
+    public GameObject enemyHP;
+    public GameObject[] AttackButton;
 
+    public int attackcount;
+    private struct_cardattacks cardattacks;
 
     public List<Card_Info> Cards = new List<Card_Info>();
     public Table_Data TableData;
@@ -43,6 +48,15 @@ public class match_info : MonoBehaviour {
     private void OnEnable()
     {
         form = new WWWForm();
+    }
+
+    public void Change_Buttons()
+    {
+        for (int i = 0; i < cardattacks.list.Count - 1; i++)
+        {
+            AttackButton[i].GetComponentInChildren<UnityEngine.UI.Text>().text = cardattacks.list[i].name;
+            AttackButton[i].transform.FindChild("Attack_Power").GetComponentInChildren<UnityEngine.UI.Text>().text = cardattacks.list[i].damage.ToString();
+        }
     }
 
     public struct Table_Data
@@ -81,6 +95,13 @@ public class match_info : MonoBehaviour {
                 {
                     turn = false;
                 }
+            }
+            //if (status == 4)
+            {
+            }
+           //else
+            {
+
             }
             //print("TURA: " + status + turn);
         }
@@ -211,6 +232,18 @@ public class match_info : MonoBehaviour {
                     tmp[0].sprite = Resources.Load(CardPlayed[i].CardID.ToString(), typeof(Sprite)) as Sprite;
                 }
             }
+
+            playerHP.GetComponent<UnityEngine.UI.Text>().text = structs[5];
+            enemyHP.GetComponent<UnityEngine.UI.Text>().text = structs[6];
+
+            string[] attackdata = structs[7].Split('$');
+
+            cardattacks = new struct_cardattacks(attackdata);
+
+            Debug.Log(cardattacks.list[0].name + " " + cardattacks.list[0].damage + " " + cardattacks.list.Count);
+
+            Change_Buttons();
+
 
         }
     }
