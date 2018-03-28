@@ -31,7 +31,7 @@ public class play_card : MonoBehaviour {
         form.AddField("checkin", "okoń");
         form.AddField("username", globals.logged_username);
         form.AddField("card_slot", picked);
-        w = new WWW("http://testhtml5.wex.pl/play_card.php", form);
+        w = new WWW(globals.server_address + "/play_card.php", form);
         yield return w;
         if (w.error != null)
         {

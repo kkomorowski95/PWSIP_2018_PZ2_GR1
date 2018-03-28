@@ -1,9 +1,6 @@
+
 <?php
-	$server_name = "userdb1";
-	$server_login = "716915_IgA";
-	$server_password = "hn4Dv4J44ejqny";
-	$dbname = "716915_IgA";
-	
+	include 'vars.php';
 	$game_username = $_POST["username"];
 	
 	mysql_connect($server_name, $server_login, $server_password);
