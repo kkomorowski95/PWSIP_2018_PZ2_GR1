@@ -55,7 +55,7 @@ public class match_info : MonoBehaviour {
         for (int i = 0; i < cardattacks.list.Count - 1; i++)
         {
             AttackButton[i].GetComponentInChildren<UnityEngine.UI.Text>().text = cardattacks.list[i].name;
-            AttackButton[i].transform.FindChild("Attack_Power").GetComponentInChildren<UnityEngine.UI.Text>().text = cardattacks.list[i].damage.ToString();
+            AttackButton[i].transform.Find("Attack_Power").GetComponentInChildren<UnityEngine.UI.Text>().text = cardattacks.list[i].damage.ToString();
         }
     }
 
