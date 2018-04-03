@@ -38,7 +38,7 @@ public class pick_attack : MonoBehaviour {
     {
         form.AddField("checkin", "okoń");
         form.AddField("attacknumer", AttackNumber);
-        w = new WWW("http://testhtml5.wex.pl/send_attack.php", form);
+        w = new WWW(globals.server_address + "/send_attack.php", form);
 
         yield return w;
         if (w.error != null)

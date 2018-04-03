@@ -23,7 +23,7 @@ public class menu : MonoBehaviour {
     IEnumerator LoadData(){
         form = new WWWForm();
         form.AddField("checkin", "okoń");
-        w = new WWW("http://testhtml5.wex.pl/get_card_data.php", form);
+        w = new WWW(globals.server_address + "/get_card_data.php", form);
         yield return w;
         string[] stringonly = w.text.Split('<');
         string[] tables = stringonly[0].Split('&');
@@ -123,7 +123,7 @@ public class menu : MonoBehaviour {
         form = new WWWForm();
         form.AddField("checkin", "okoń");
         form.AddField("username", globals.logged_username);
-        w = new WWW("http://testhtml5.wex.pl/mm_join.php", form);
+        w = new WWW(globals.server_address + "/mm_join.php", form);
         yield return w;
         if (w.error != null)
         {
@@ -144,7 +144,7 @@ public class menu : MonoBehaviour {
         form = new WWWForm();
         form.AddField("checkin", "okoń");
         form.AddField("username", globals.logged_username);
-        w = new WWW("http://testhtml5.wex.pl/mm_leave.php", form);
+        w = new WWW(globals.server_address + "/mm_leave.php", form);
         yield return w;
         if (w.error != null)
         {
@@ -163,7 +163,7 @@ public class menu : MonoBehaviour {
         form = new WWWForm();
         form.AddField("checkin", "okoń");
         form.AddField("username", globals.logged_username);
-        ww = new WWW("http://testhtml5.wex.pl/check_matched.php", form);
+        ww = new WWW(globals.server_address + "/check_matched.php", form);
         yield return ww;
         string[] substrings2 = ww.text.Split('<');
         string[] substrings3 = substrings2[0].Split('|');
@@ -189,7 +189,7 @@ public class menu : MonoBehaviour {
         string Queue = "Szybkie dobieranie";
         string TimeInQueue = "Czas w kolejce:";
         string PlayersInQueue = "Osób w kolejce:";
-        w = new WWW("http://testhtml5.wex.pl/check_queue.php");
+        w = new WWW(globals.server_address + "/check_queue.php");
         yield return w;
         string[] substrings = w.text.Split('<');
         PlayersInQueue = PlayersInQueue + " " + substrings[0];

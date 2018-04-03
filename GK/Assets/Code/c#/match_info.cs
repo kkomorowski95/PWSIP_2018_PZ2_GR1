@@ -141,7 +141,7 @@ public class match_info : MonoBehaviour {
     {
         form.AddField("checkin", "okoń");
         form.AddField("username", globals.logged_username);
-        w = new WWW("http://testhtml5.wex.pl/get_table_data.php", form);
+        w = new WWW(globals.server_address + "/get_table_data.php", form);
         yield return w;
         if (w.error != null)
         {

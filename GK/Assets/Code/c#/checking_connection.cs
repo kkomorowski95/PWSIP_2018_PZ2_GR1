@@ -30,7 +30,7 @@ public class checking_connection : MonoBehaviour
     {
         form.AddField("checkin", "okoń");
         form.AddField("user", globals.logged_username);
-        w = new WWW("http://testhtml5.wex.pl/check_session.php", form);
+        w = new WWW(globals.server_address + "/check_session.php", form);
         yield return w;
         if (w.error != null)
         {

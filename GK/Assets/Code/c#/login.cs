@@ -39,7 +39,7 @@ public class login : MonoBehaviour
         form.AddField("username", username.GetComponent<InputField>().text);
         //form.AddField("password", Encoding.Default.GetString(enpsw));
         form.AddField("password", psstring);
-        w = new WWW("http://testhtml5.wex.pl/login.php", form);
+        w = new WWW(globals.server_address+"/login.php", form);
         yield return w;
         if (w.error != null)
         {
