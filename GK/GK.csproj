@@ -308,6 +308,7 @@
     <Compile Include="Assets\ClassicSRIA\Scripts\Util\CLoadSceneOnClick.cs" />
     <Compile Include="Assets\Code\c#\card.cs" />
     <Compile Include="Assets\Code\c#\checking_connection.cs" />
+    <Compile Include="Assets\Code\c#\Deck.cs" />
     <Compile Include="Assets\Code\c#\fast_matchmaking.cs" />
     <Compile Include="Assets\Code\c#\globals.cs" />
     <Compile Include="Assets\Code\c#\ingame.cs" />
