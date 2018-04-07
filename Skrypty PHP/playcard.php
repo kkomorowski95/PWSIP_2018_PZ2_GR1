@@ -1,8 +1,5 @@
 <?php
-	$server_name = "userdb1";
-	$server_login = "716915_IgA";
-	$server_password = "hn4Dv4J44ejqny";
-	$dbname = "716915_IgA";
+	include 'vars.php';
 	
 	#$conn = new mysqli($server_name, $server_login, $server_password);
     mysql_connect($server_name, $server_login, $server_password);

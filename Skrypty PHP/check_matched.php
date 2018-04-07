@@ -1,4 +1,3 @@
-
 <?php
 	include 'vars.php';
 	$game_username = $_POST["username"];
