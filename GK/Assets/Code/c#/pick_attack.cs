@@ -37,6 +37,7 @@ public class pick_attack : MonoBehaviour {
     IEnumerator Data(int AttackNumber)
     {
         form.AddField("checkin", "okoń");
+        form.AddField("username", globals.logged_username);
         form.AddField("attacknumer", AttackNumber);
         w = new WWW(globals.server_address + "/send_attack.php", form);
 
@@ -48,7 +49,7 @@ public class pick_attack : MonoBehaviour {
         else
         {
             string[] temp = w.text.Split('<');
-            print("Wysłano: " + temp[0]);
+            print("Wysłano: " + w.text);
         }
     }
 }

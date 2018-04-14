@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ds.unity
+- path: Assets/NowaGra.unity
   isLoaded: 1
   isActive: 1

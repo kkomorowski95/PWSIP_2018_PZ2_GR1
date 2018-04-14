@@ -495,8 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 178170171}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &178170173
 SpriteRenderer:
@@ -927,8 +927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 281285800}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &281285802
 SpriteRenderer:
@@ -1317,8 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 410693771}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!61 &410693777
 BoxCollider2D:
@@ -1909,8 +1909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 731143599}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!61 &731143604
 BoxCollider2D:
@@ -2048,8 +2048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 772781475}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!1 &818675008
 GameObject:
@@ -2152,8 +2152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 838249098}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &838249100
 SpriteRenderer:
@@ -2880,8 +2880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 1361517005}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &1361517007
 SpriteRenderer:
@@ -3051,7 +3051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7567509026fe945a61e1679eb6bc7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stol: {fileID: 0}
+  stol: {fileID: 2145309955}
 --- !u!61 &1418313305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3106,8 +3106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 1448215830}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &1448215832
 SpriteRenderer:
@@ -3428,8 +3428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 1643524111}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &1643524113
 SpriteRenderer:
@@ -3590,8 +3590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9feaf1a10a054a902233a644b9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karta: {fileID: 0}
-  stol: {fileID: 0}
+  karta: {fileID: 1699771605}
+  stol: {fileID: 2145309955}
   picked: 0
 --- !u!212 &1699771607
 SpriteRenderer:
