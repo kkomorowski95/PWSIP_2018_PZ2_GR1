@@ -1,0 +1,81 @@
+#container{
+	display: flex;
+	height: 600px;
+}
+
+#lewy{
+	padding-top:100px;
+	text-align: center;
+	width: 500px;
+}
+
+#aktualnosci{
+	text-align: center;
+	width: 100%;
+}
+
+#prawy{
+	text-align: center;
+	width: 600px;
+}
+
+html{
+	background-color: black;
+	color: red;
+}
+
+input[type=text], select {
+	width: 100%;
+    padding: 5px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+	width: 100%;
+    padding: 5px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+    background-color: #00a010;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button] {
+	margin-bottom: 5px;
+	width: 100%;
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #01840d;
+}
+input[type=button]:hover {
+    background-color: #e20300;
+}
+
+#logowanie{
+	display: flex;
+	flex-direction: row;
+}	
+
+
+
+
+
