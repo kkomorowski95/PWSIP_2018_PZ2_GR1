@@ -10,18 +10,25 @@
 
 ?>
 
-<!DOCTYPE HTML>
-<html lang="pl-PL">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Strona główna</title>
-	<link rel="stylesheet" href=style.css />
-</head>
+    <!DOCTYPE HTML>
+    <html lang="pl-PL">
 
-<body>	
-	
-		
-<!--	<section class="logowanie">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>The Next Card Game</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+
+        <!--	<section class="logowanie">
 		<div>
 			<form action="zaloguj.php" method="post">
 			
@@ -34,49 +41,53 @@
 			
 		</div>
 	</section> 
--->	
-	<div id="container">
-	
-		<div id="lewy">
-			<ul>
-				<li>
-					<a href="/projekt/index.php">
-						<input type="button" Value="Strona Główna" /></a>
-				</li>
-				<li>
-					<a href="/projekt/rejestracja.php">
-						<input type="button" value="Zarejestruj się!"/> </a>
-				</li>
-				<li>
-					<a href="/projekt/download.php">
-						<input type="button" Value="Download" /></a>
-				</li>
-			</ul>
-		</div>
-		
-		<div id="aktualnosci">
-			<h2>Aktualności</h2>				
-		</div>		
-		
-		<div id="prawy">
-		
-		</div>
-		
-		
-	</div>
-		
+-->
+        <div id="container">
+            <div id="header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
 
-		
-<?php
+                    <a class="navbar-brand" href="#">The Next Card Game</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/Strona/index.php" value="Strona Główna">Strona Główna
+                <span class="sr-only">(current)</span>
+              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Strona/rejestracja.php" Value="Zarejestruj się!">Zarejestruj się</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Strona/download.php" Value="Download">Download</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+
+            <div class="main">
+                <h2>Aktualności</h2>
+            </div>
+
+        </div>
+
+
+
+        <?php
 
 	if(isset($_SESSION['blad']))	
 		echo $_SESSION['blad'];
 	
 ?>
-		</form>
-	</div>
-	
 
 
-</body>
-</html>
+            <!-- Bootstrap core JavaScript -->
+            <script src="jquery/jquery.min.js"></script>
+            <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>

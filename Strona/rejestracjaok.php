@@ -4,7 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Projekt - rejestracja udana</title>
-	<link rel="stylesheet" href=style.css />
+	
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,9 +14,11 @@
 	
 	<h2>Za chwilę zostaniesz przekierowany na stronę główną.</h2>
 	<?php
-		header('Refresh: 5; url=http://localhost/projekt/index.php');
+		header('Refresh: 5; url=http://localhost/Strona/index.php');
 	?>
 
-
+ <!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
