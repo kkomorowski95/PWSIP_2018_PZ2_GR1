@@ -8,7 +8,7 @@ using System.IO;
 
 public class globals : MonoBehaviour
 {
-    public static string logged_username = "test02";
+    public static string logged_username = "test01";
     //Nowy serwer
     public static string server_address = "http://82.139.152.193/pr@tct";
     //Stary serwer
