@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/ds.unity
     guid: f6aa7f7bfc7bde54da80351fa04ccd1c
   - enabled: 1
-    path: Assets/Autorzy.unity
-    guid: a195ebf582ee4cf47b86a6545b205451
-  - enabled: 1
     path: Assets/Opcje.unity
     guid: 49bbf328c30c1c540b9f4ffb70fae826
+  - enabled: 1
+    path: Assets/Autorzy.unity
+    guid: a195ebf582ee4cf47b86a6545b205451
