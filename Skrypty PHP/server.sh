@@ -14,21 +14,25 @@ MATCHING="$DIRECTORY/matching.php"
 
 CREATINGTABLE="$DIRECTORY/creating_table.php"
 
-LOG=/var/log/gameserver/runtime.log
+ATTACKTURN="$DIRECTORY/do_attack_turn.php"
 
-echo `date` "starting..." >> ${LOG} 2>&1
+#LOG=/var/log/gameserver/runtime.log
+
+#echo `date` "starting..." >> ${LOG} 2>&1
 
 while true
 
 do
 
- $PHP $LOGOFF >> ${LOG} 2>&1
+ $PHP $LOGOFF
 
- $PHP $MATCHING >> ${LOG} 2>&1
+ $PHP $MATCHING
 
- $PHP $CREATINGTABLE >> ${LOG} 2>&1
+ $PHP $CREATINGTABLE
+ 
+ $PHP $ATTACKTURN
 
- echo `date` "sleeping..." >> ${LOG} 2>&1
+ #echo `date` "sleeping..." >> ${LOG} 2>&1
 
  sleep ${SNOOZE}
 
