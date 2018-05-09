@@ -4,7 +4,7 @@
 	mysql_connect($server_name, $server_login, $server_password);
 	@mysql_select_db($dbname);
 	
-	$query = "SELECT * FROM Game_Table WHERE Player1_Handshake > 0 AND Player2_Handshake > 0";
+	$query = "SELECT * FROM Game_Table WHERE Player1_Handshake > 0 AND Player2_Handshake > 0 AND Status = 4";
 	$result = mysql_query($query);
 	
 	$num=mysql_numrows($result);
@@ -73,6 +73,42 @@
 				$query6 = "UPDATE Game_Table SET Player1_Handshake = 0, Player2_Handshake = 0 WHERE ID = " . mysql_result($result,$i,"ID");
 				$result6 = mysql_query($query6);
 				echo "powinno zrobić";
+			
+			//Sprawdzanie HP
+			$queryn = "SELECT Player1_HP, Player2_HP FROM Game_Table WHERE ID = " . mysql_result($result,$i,"ID");
+			$resultn = mysql_query($queryn);
+			$p1lost = 0;
+			$p2lost = 0;
+			if (mysql_result($resultn, 0, "Player1_HP") <= 0)
+			{
+				$p1lost = 1;
+				echo "Gracz 1 przegrał! " . mysql_result($resultn, 0, "Player1_HP");
+			}
+			if (mysql_result($resultn, 0, "Player2_HP") <= 0)
+			{
+				$p2lost = 1;
+				echo "Gracz 2 przegrał! " . mysql_result($resultn, 0, "Player2_HP");
+			}
+			//5 - wygrana gracz 1, 6 - wygrana gracz 2, 7 - remis
+			if ($p1lost == 1 && $p2lost == 1)
+			{
+				$queryw1 = "UPDATE Game_Table SET Status = 7 WHERE ID = " . mysql_result($result,$i,"ID");
+				$resultw1 = mysql_query($queryw1);
+				echo " Status 7?";
+			}
+			else if ($p1lost == 1)
+			{
+				$queryw2 = "UPDATE Game_Table SET Status = 6 WHERE ID = " . mysql_result($result,$i,"ID");
+				$resultw2 = mysql_query($queryw2);
+				echo " Status 6?";
+			}
+			else if ($p2lost == 1)
+			{
+				$queryw3 = "UPDATE Game_Table SET Status = 5 WHERE ID = " . mysql_result($result,$i,"ID");
+				$resultw3 = mysql_query($queryw3);
+				echo " Status 5?";
+			}
+			
 			$i++;
 		}
 	}

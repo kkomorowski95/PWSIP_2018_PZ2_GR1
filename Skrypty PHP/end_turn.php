@@ -55,7 +55,7 @@
 		{
 			if (mysql_result($result,0,"Status") == 3)
 			{
-				$query = "UPDATE Game_Table SET Status = 2 WHERE ID = " . mysql_result($result, 0, "ID");
+				$query = "UPDATE Game_Table SET Status = 4 WHERE ID = " . mysql_result($result, 0, "ID");
 				$result2 = mysql_query($query);
 				if (mysql_affected_rows()>0)
 				{
