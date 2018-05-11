@@ -45,6 +45,9 @@ public class play_card : MonoBehaviour {
 
     void OnMouseDown()
     {
-        StartCoroutine(Send_data());
+        if (stol.GetComponent<match_info>().TableData.turn == true)
+        {
+            StartCoroutine(Send_data());
+        }
     }
 }

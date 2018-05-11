@@ -91,12 +91,12 @@ public class menu : MonoBehaviour {
 	}
     public void NowaGra()
     {
-        Application.LoadLevel(2);
+        Application.LoadLevel(3);
     }
     public void Multi()
     {
         StartCoroutine(AddQ());
-        Application.LoadLevel(3);
+        //Application.LoadLevel(2);
     }
     public void Opcje()
     {

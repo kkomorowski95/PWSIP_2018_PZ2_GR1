@@ -13,6 +13,8 @@ public class match_info : MonoBehaviour {
     public GameObject playerHP;
     public GameObject enemyHP;
     public GameObject[] AttackButton;
+    public GameObject GameOverText;
+    public GameObject GameOverButton;
 
     public int attackcount;
     private struct_cardattacks cardattacks;
@@ -95,13 +97,6 @@ public class match_info : MonoBehaviour {
                 {
                     turn = false;
                 }
-            }
-            //if (status == 4)
-            {
-            }
-           //else
-            {
-
             }
             //print("TURA: " + status + turn);
         }
@@ -240,7 +235,7 @@ public class match_info : MonoBehaviour {
 
             cardattacks = new struct_cardattacks(attackdata);
 
-            Debug.Log(cardattacks.list[0].name + " " + cardattacks.list[0].damage + " " + cardattacks.list.Count);
+            //Debug.Log(cardattacks.list[0].name + " " + cardattacks.list[0].damage + " " + cardattacks.list.Count);
 
             Change_Buttons();
 
@@ -265,5 +260,45 @@ public class match_info : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         button.active = TableData.turn;
+        if (TableData.status == 4)
+        {
+
+            AttackButton[0].active = true;
+            AttackButton[1].active = true;
+            AttackButton[2].active = true;
+            AttackButton[3].active = true;
+        }
+        else
+        {
+            AttackButton[0].active = false;
+            AttackButton[1].active = false;
+            AttackButton[2].active = false;
+            AttackButton[3].active = false;
+        }
+        if (TableData.status >= 5)
+        {
+            GameOverButton.active = true;
+            if (TableData.status == 5)
+            {
+                GameOverText.GetComponent<UnityEngine.UI.Text>().text = "Wygrana";
+            }
+            if (TableData.status == 6)
+            {
+                GameOverText.GetComponent<UnityEngine.UI.Text>().text = "Przegrana";
+            }
+            if (TableData.status == 7)
+            {
+                GameOverText.GetComponent<UnityEngine.UI.Text>().text = "Remis";
+            }
+        }
+        else
+        {
+            GameOverButton.active = false;
+        }
+    }
+
+    public void ToMenu()
+    {
+        Application.LoadLevel(1);
     }
 }
