@@ -28,7 +28,8 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="download.php" Value="Download"><span class="glyphicon glyphicon-log-in"></span> Download</a></li>
+						<li><a href="game.php" Value="Graj online"><span class="glyphicon glyphicon-log-in"></span>Graj online</a></li>
+                        <li class="active"><a href="download.php" Value="Pobierz"><span class="glyphicon glyphicon-log-in"></span>Pobierz</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,11 +53,29 @@
                     </div>
                 </div>
                 <div class="col-sm-8 text-left">
-                    <h1>Pobieranie jeszcze nie jest dostępne.</h1>
-                    <p>Za chwilę zostaniesz przekierowany na stronę główną.</p>
-                    <hr>
-                    <h3>Test</h3>
-                    <p>Lorem ipsum...</p>
+                    <h1>Wybierz platformę na jaką chcesz pobrać aplikację.</h1>
+					<h3>Komputery stacjonarne</h3>
+                    <table class="table table-hover">
+						<tbody>
+						<tr>
+							<td>32-bit</td>
+							<td><a href="download/gra_karciana_x86.zip">Pobierz archiwum</a></td>
+						</tr>
+						<tr>
+							<td>64-bit</td>
+							<td><a href="download/gra_karciana_x86_64.zip">Pobierz archiwum</a></td>
+						</tr>
+						</tbody>
+					</table>
+					<h3>Systemy mobilne</h3>
+					<table class="table table-hover">
+						<tbody>
+						<tr>
+							<td>Android 4.1 i nowszy</td>
+							<td><a href="download/dev_build.apk">Pobierz APK</a></td>
+						</tr>
+						</tbody>
+					</table>
                 </div>
                 <div class="col-sm-2 sidenav">
                     <div class="well">
@@ -75,8 +94,5 @@
             </footer>
         </div>
 
-	<?php
-		header('Refresh: 5; url=http://localhost/Strona/index.php');
-	?> 
 </body>
 </html>

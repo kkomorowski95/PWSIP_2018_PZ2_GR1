@@ -2,7 +2,7 @@
 
 	session_start();
 
-	if(isset(($_POST['password_rejestracja'])))
+	if(Null !== ($_POST['password_rejestracja']))
 	{
 		$rejestracja=true;		
 		$rejestracja_name = $_POST['name_rejestracja'];		
@@ -62,7 +62,7 @@
 			}
 			else
 			{
-				$wynik=$polaczenie->query("SELECT name FROM player WHERE name='$rejestracja_name'");				
+				$wynik=$polaczenie->query("SELECT name FROM Player WHERE name='$rejestracja_name'");				
 				if(!$wynik)
 				{
 					throw new Exception($polaczenie->error);
@@ -77,7 +77,7 @@
 				
 				if($rejestracja==true)
 				{
-					if($polaczenie->query("INSERT INTO player VALUES
+					if($polaczenie->query("INSERT INTO Player VALUES
 					('$rejestracja_name','$rejestracja_password',0,0,0,0,0,0,0,0,1,1)"))
 					{
 					$_SESSION['rejestracjaok']=true;
@@ -132,7 +132,8 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="download.php" Value="Download"><span class="glyphicon glyphicon-log-in"></span> Download</a></li>
+						<li><a href="game.php" Value="Graj online"><span class="glyphicon glyphicon-log-in"></span>Graj online</a></li>
+                        <li><a href="download.php" Value="Pobierz"><span class="glyphicon glyphicon-log-in"></span>Pobierz</a></li>
                     </ul>
                 </div>
             </div>
